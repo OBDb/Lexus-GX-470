@@ -1,0 +1,18 @@
+command_id: 7E0.7E8.2106
+test_cases:
+- expected_values:
+    LEXUS_MIL: 1
+    LEXUS_NUMBER_OF_EMISSION_DTC: 1
+  response: '7E803610681'
+- expected_values:
+    LEXUS_MIL: 1
+    LEXUS_NUMBER_OF_EMISSION_DTC: 2
+  response: '7E803610682'
+- expected_values:
+    LEXUS_MIL: 1
+    LEXUS_NUMBER_OF_EMISSION_DTC: 3
+  response: '7E803610683'
+- expected_values:
+    LEXUS_MIL: 1
+    LEXUS_NUMBER_OF_EMISSION_DTC: 4
+  response: '7E803610684'
