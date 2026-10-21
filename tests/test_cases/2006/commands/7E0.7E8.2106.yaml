@@ -1,6 +1,0 @@
-command_id: 7E0.7E8.2106
-test_cases:
-- expected_values:
-    GX470_MIL: 1
-    GX470_NUMBER_OF_EMISSION_DTC: 0
-  response: '7E803610680'
