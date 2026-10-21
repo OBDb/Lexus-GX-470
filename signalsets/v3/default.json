@@ -1,4 +1,621 @@
-{ "commands": [
-
+{ "ecu": [
+    { "hdr": "7E0", "type": "engine" },
+    { "hdr": "7E1", "type": "transmission" }
+  ],
+  "commands": [
+{ "hdr": "750", "rax": "758", "eax": "2A", "fcm1": true, "dbg": true, "cmd": {"21": "15"}, "freq": 15,
+  "signals": [
+    {"id": "GX470_TIRE_P_1_SET_2", "path": "Tires", "fmt": {           "len": 8, "max": 3.89, "min": -0.5, "mul": 69, "div": 4000, "add": -0.5, "unit": "bars" }, "name": "Tire pressure 1, set 2"},
+    {"id": "GX470_TIRE_P_2_SET_2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 3.89, "min": -0.5, "mul": 69, "div": 4000, "add": -0.5, "unit": "bars" }, "name": "Tire pressure 2, set 2"},
+    {"id": "GX470_TIRE_P_3_SET_2", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 3.89, "min": -0.5, "mul": 69, "div": 4000, "add": -0.5, "unit": "bars" }, "name": "Tire pressure 3, set 2"},
+    {"id": "GX470_TIRE_P_4_SET_2", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 3.89, "min": -0.5, "mul": 69, "div": 4000, "add": -0.5, "unit": "bars" }, "name": "Tire pressure 4, set 2"},
+    {"id": "GX470_TIRE_P_5_SET_2", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 3.89, "min": -0.5, "mul": 69, "div": 4000, "add": -0.5, "unit": "bars" }, "name": "Tire pressure 5, set 2"}
+  ]},
+{ "hdr": "750", "rax": "758", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"21": "30"}, "freq": 2.5, "filter": { "years": [1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2006, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2018, 2020], "from": 2022 },
+  "signals": [
+    {"id": "GX470_TP_FL",    "path": "Tires", "fmt": {           "len": 8, "max": 3.896, "div": 58, "add": -0.5, "nullmin": 0, "nullmax": 3.896, "unit": "bars" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "GX470_TP_FR",    "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 3.896, "div": 58, "add": -0.5, "nullmin": 0, "nullmax": 3.896, "unit": "bars" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "GX470_TP_RL",    "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 3.896, "div": 58, "add": -0.5, "nullmin": 0, "nullmax": 3.896, "unit": "bars" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "GX470_TP_RR",    "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 3.896, "div": 58, "add": -0.5, "nullmin": 0, "nullmax": 3.896, "unit": "bars" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "GX470_TP_SPARE", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 3.896, "div": 58, "add": -0.5, "nullmin": 0, "nullmax": 3.896, "unit": "bars" }, "name": "Spare tire pressure"}
+  ]},
+{ "hdr": "750", "rax": "758", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1004"}, "freq": 15,
+  "signals": [
+    {"id": "GX470_TT_1", "path": "Tires", "fmt": {           "len": 8, "max": 100, "min": -30, "add": -40, "nullmin": -30, "unit": "celsius" }, "name": "Front right tire temperature"},
+    {"id": "GX470_TT_2", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 100, "min": -30, "add": -40, "nullmin": -30, "unit": "celsius" }, "name": "Rear right tire temperature"},
+    {"id": "GX470_TT_3", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 100, "min": -30, "add": -40, "nullmin": -30, "unit": "celsius" }, "name": "Front left tire temperature"},
+    {"id": "GX470_TT_4", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 100, "min": -30, "add": -40, "nullmin": -30, "unit": "celsius" }, "name": "Rear left tire temperature"},
+    {"id": "GX470_TT_5", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 100, "min": -30, "add": -40, "nullmin": -30, "unit": "celsius" }, "name": "Spare tire temperature"}
+  ]},
+{ "hdr": "750", "rax": "758", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "1005"}, "freq": 15,
+  "signals": [
+    {"id": "GX470_TP_1", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 56.121212, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"},
+    {"id": "GX470_TP_2", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 56.121212, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Rear right tire pressure",  "suggestedMetric": "rearRightTirePressure"},
+    {"id": "GX470_TP_3", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 56.121212, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Front left tire pressure",  "suggestedMetric": "frontLeftTirePressure"},
+    {"id": "GX470_TP_4", "path": "Tires", "fmt": {"bix": 56, "len": 8, "max": 56.121212, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Rear left tire pressure",   "suggestedMetric": "rearLeftTirePressure"},
+    {"id": "GX470_TP_5", "path": "Tires", "fmt": {"bix": 72, "len": 8, "max": 56.121212, "div": 4.125, "add": -5.6969697, "nullmin": 0, "unit": "psi" }, "name": "Spare tire pressure"}
+  ]},
+{ "hdr": "750", "rax": "758", "eax": "2A", "tst": "2A", "fcm1": true, "dbg": true, "cmd": {"22": "2021"}, "freq": 86400,
+  "signals": [
+    {"id": "GX470_TID_1", "path": "Tires", "name": "Tire 1 position", "fmt": {"len": 8, "map": {
+          "1": { "description": "Front left",  "value": "FL" },
+          "2": { "description": "Front right", "value": "FR" },
+          "3": { "description": "Rear left",   "value": "RL" },
+          "4": { "description": "Rear right",  "value": "RR" }
+        }}
+    },
+    {"id": "GX470_TID_2", "path": "Tires", "name": "Tire 2 position", "fmt": {"bix": 8, "len": 8, "map": {
+          "1": { "description": "Front left",  "value": "FL" },
+          "2": { "description": "Front right", "value": "FR" },
+          "3": { "description": "Rear left",   "value": "RL" },
+          "4": { "description": "Rear right",  "value": "RR" }
+        }}
+    },
+    {"id": "GX470_TID_3", "path": "Tires", "name": "Tire 3 position", "fmt": {"bix": 16, "len": 8, "map": {
+          "1": { "description": "Front left",  "value": "FL" },
+          "2": { "description": "Front right", "value": "FR" },
+          "3": { "description": "Rear left",   "value": "RL" },
+          "4": { "description": "Rear right",  "value": "RR" }
+        }}
+    },
+    {"id": "GX470_TID_4", "path": "Tires", "name": "Tire 4 position", "fmt": {"bix": 24, "len": 8, "map": {
+          "1": { "description": "Front left",  "value": "FL" },
+          "2": { "description": "Front right", "value": "FR" },
+          "3": { "description": "Rear left",   "value": "RL" },
+          "4": { "description": "Rear right",  "value": "RR" }
+        }}
+    }
+  ]},
+{ "hdr": "780", "rax": "788", "dbg": true, "cmd": {"21": "04"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_BUCKLE_RS", "path": "Seatbelts", "fmt": {"bix": 24, "len": 8, "max": 255, "unit": "scalar" }, "name": "Buckle switch, right side"},
+    {"id": "GX470_BUCKLE_LS", "path": "Seatbelts", "fmt": {"bix": 32, "len": 8, "max": 255, "unit": "scalar" }, "name": "Buckle switch, left side"}
+  ]},
+{ "hdr": "7B0", "dbg": true, "cmd": {"21": "BC"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_HAZARD_SWITCH_HISTORY", "path": "Lights", "name": "Hazard switch history", "fmt": {"bix": 2, "len": 1, "map": {
+          "0": { "description": "Incomplete", "value": "INCOMPLETE" },
+          "1": { "description": "Complete",   "value": "COMPLETE" }
+        }}
+    }
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "03"}, "freq": 0.25, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_TIRE_FR_SPD", "path": "Movement", "fmt": {           "len": 8, "max": 326.4, "mul": 256, "div": 200, "unit": "kilometersPerHour" }, "name": "Front right wheel speed"},
+    {"id": "GX470_TIRE_FL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 326.4, "mul": 256, "div": 200, "unit": "kilometersPerHour" }, "name": "Front left wheel speed"},
+    {"id": "GX470_TIRE_RR_SPD", "path": "Movement", "fmt": {"bix": 16, "len": 8, "max": 326.4, "mul": 256, "div": 200, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"},
+    {"id": "GX470_TIRE_RL_SPD", "path": "Movement", "fmt": {"bix": 24, "len": 8, "max": 326.4, "mul": 256, "div": 200, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "05"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_DECEL",   "path": "Orientation", "fmt": {          "len": 8, "max": 18.18, "min": -18.18, "mul": 36.36, "div": 255, "add": -18.18, "unit": "metersPerSecondSquared" }, "name": "Deceleration"},
+    {"id": "GX470_DECEL_2", "path": "Orientation", "fmt": {"bix": 8, "len": 8, "max": 18.18, "min": -18.18, "mul": 36.36, "div": 255, "add": -18.18, "unit": "metersPerSecondSquared" }, "name": "Deceleration 2"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "06"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_YAW_1", "path": "Orientation", "fmt": {          "len": 8, "max": 127, "min": -128, "add": -128, "unit": "scalar" }, "name": "Yaw rate, sensor 1"},
+    {"id": "GX470_YAW_2", "path": "Orientation", "fmt": {"bix": 8, "len": 8, "max": 127, "min": -128, "add": -128, "unit": "scalar" }, "name": "Yaw rate, sensor 2"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "07"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_WHEEL_CYLINDER_PRESSURE", "path": "Tires", "fmt": { "len": 8, "max": 5, "div": 51, "unit": "volts" }, "name": "Wheel cylinder pressure"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1D"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_RESERVOIR_WARNING_SW", "path": "Control", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Reservoir warning"},
+    {"id": "GX470_MAIN_IDLE_SW",         "path": "Control", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Main idle"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "1F"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_STOP_LIGHT_SW",    "path": "Lights",  "fmt": {          "len": 1, "max": 1, "unit": "offon" }, "name": "Stop light"},
+    {"id": "GX470_PARKING_BRAKE_SW", "path": "Control", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Parking brake"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "21"}, "freq": 0.2, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_VSS", "path": "Movement", "fmt": { "len": 8, "max": 323.85, "mul": 1.35, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "3C"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_STOP_LIGHT_RELAY", "path": "Lights", "fmt": { "len": 1, "max": 1, "unit": "offon" }, "name": "Stop light relay"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "3D"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_ABS_WARN",   "path": "Control", "fmt": {          "len": 1, "max": 1, "unit": "offon" }, "name": "Anti-lock brake warning light"},
+    {"id": "GX470_BRAKE_WARN", "path": "Control", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Brake warning light"},
+    {"id": "GX470_SLIP_WARN",  "path": "Control", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Slip indicator light"},
+    {"id": "GX470_BUZZER",     "path": "Control", "fmt": {"bix": 3, "len": 1, "max": 1, "unit": "offon" }, "name": "Buzzer"},
+    {"id": "GX470_ECB_WARN",   "path": "Control", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "offon" }, "name": "Electronically controlled brake warning light"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "42"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_FR_WHEEL_ACCELERATION", "path": "Movement", "fmt": {           "len": 8, "max": 199.27, "min": -200.83, "mul": 1.56906, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Front right wheel acceleration"},
+    {"id": "GX470_FL_WHEEL_ACCELERATION", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 199.27, "min": -200.83, "mul": 1.56906, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Front left wheel acceleration"},
+    {"id": "GX470_RR_WHEEL_ACCELERATION", "path": "Movement", "fmt": {"bix": 16, "len": 8, "max": 199.27, "min": -200.83, "mul": 1.56906, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Rear right wheel acceleration"},
+    {"id": "GX470_RL_WHEEL_ACCELERATION", "path": "Movement", "fmt": {"bix": 24, "len": 8, "max": 199.27, "min": -200.83, "mul": 1.56906, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Rear left wheel acceleration"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "46"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_ZP_DEC",  "path": "Orientation", "fmt": {           "len": 8, "max": 2.54, "min": -2.56, "div": 50,              "sign": true, "unit": "gravity" }, "name": "Zero point of deceleration"},
+    {"id": "GX470_ZP_DEC2", "path": "Orientation", "fmt": {"bix": 8,  "len": 8, "max": 2.54, "min": -2.56, "div": 50,              "sign": true, "unit": "gravity" }, "name": "Zero point of deceleration 2"},
+    {"id": "GX470_ZP_YAW",  "path": "Orientation", "fmt": {"bix": 16, "len": 8, "max": 127,  "min": -128,             "add": -128,               "unit": "scalar"  }, "name": "Zero point of yaw rate"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "47"}, "freq": 0.25, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_LAT_G",       "path": "Orientation", "fmt": {           "len": 8,  "max": 2.5,  "min": -2.5,  "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Lateral g"},
+    {"id": "GX470_LNG_G",       "path": "Orientation", "fmt": {"bix": 8,  "len": 8,  "max": 2.5,  "min": -2.5,  "div": 50,                 "sign": true, "unit": "gravity" }, "name": "Longitudinal g"},
+    {"id": "GX470_YAW_RATE",    "path": "Orientation", "fmt": {"bix": 16, "len": 8,  "max": 127,  "min": -128,             "add": -128,                  "unit": "degrees" }, "name": "Yaw rate value"},
+    {"id": "GX470_STEER_ANGLE", "path": "Control",     "fmt": {"bix": 24, "len": 16, "max": 3276, "min": -3276, "div": 10, "add": -3276.8,               "unit": "degrees" }, "name": "Steering wheel angle", "description": "Positive = counter-clockwise, negative = clockwise."}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5A"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_TRC_TRAC__CTRL",        "path": "Tires",   "fmt": {           "len": 1, "max": 1, "unit": "offon" }, "name": "Traction control, status"},
+    {"id": "GX470_TRC_TRAC__ENGINE_CTRL", "path": "Tires",   "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "offon" }, "name": "Traction control, engine status"},
+    {"id": "GX470_TRC_TRAC__BRAKE_CTRL",  "path": "Control", "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "offon" }, "name": "Traction control, brake status"},
+    {"id": "GX470_FR_WHEEL_VSC_CTRL",     "path": "Tires",   "fmt": {"bix": 8,  "len": 1, "max": 1, "unit": "offon" }, "name": "Front right wheel vehicle stability control status"},
+    {"id": "GX470_FL_WHEEL_VSC_CTRL",     "path": "Tires",   "fmt": {"bix": 9,  "len": 1, "max": 1, "unit": "offon" }, "name": "Front left wheel vehicle stability control status"},
+    {"id": "GX470_RR_WHEEL_VSC_CTRL",     "path": "Tires",   "fmt": {"bix": 10, "len": 1, "max": 1, "unit": "offon" }, "name": "Rear right wheel vehicle stability control status"},
+    {"id": "GX470_RL_WHEEL_VSC_CTRL",     "path": "Tires",   "fmt": {"bix": 11, "len": 1, "max": 1, "unit": "offon" }, "name": "Rear left wheel vehicle stability control status"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "5F"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_FR_WHEEL_ABS_CTRL", "path": "Tires", "fmt": {           "len": 1, "max": 1, "unit": "offon" }, "name": "Front right wheel ABS status"},
+    {"id": "GX470_FL_WHEEL_ABS_CTRL", "path": "Tires", "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "offon" }, "name": "Front left wheel ABS status"},
+    {"id": "GX470_RR_WHEEL_ABS_CTRL", "path": "Tires", "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "offon" }, "name": "Rear right wheel ABS status"},
+    {"id": "GX470_RL_WHEEL_ABS_CTRL", "path": "Tires", "fmt": {"bix": 3,  "len": 1, "max": 1, "unit": "offon" }, "name": "Rear left wheel ABS status"},
+    {"id": "GX470_RR_WHEEL_EBD_CTRL", "path": "Tires", "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "offon" }, "name": "Rear right wheel EBS status",    "description": "Electronic brakeforce distribution"},
+    {"id": "GX470_RL_WHEEL_EBD_CTRL", "path": "Tires", "fmt": {"bix": 7,  "len": 1, "max": 1, "unit": "offon" }, "name": "Rear left wheel EBS status",     "description": "Electronic brakeforce distribution"},
+    {"id": "GX470_BA_CTRL_STATUS",    "path": "Tires", "fmt": {"bix": 11, "len": 1, "max": 1, "unit": "offon" }, "name": "Brake assist status"},
+    {"id": "GX470_PBA_CTRL_STATUS",   "path": "Tires", "fmt": {"bix": 12, "len": 1, "max": 1, "unit": "offon" }, "name": "Predictive brake assist status"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "A1"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_ZERO_POINT_OF_YAW_RATE", "path": "Orientation", "fmt": { "len": 8, "max": 127, "min": -128, "add": -128, "unit": "scalar" }, "name": "Zero point of yaw rate"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "A6"}, "freq": 60,
+  "signals": [
+    {"id": "GX470_INSPECTION_MODE", "path": "Details", "fmt": { "len": 1, "max": 1, "unit": "offon" }, "name": "Inspection mode"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"21": "BE"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_FR_WHEEL_SPEED_OPEN",    "path": "Movement",    "fmt": {           "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right wheel speed?"},
+    {"id": "GX470_FL_WHEEL_SPEED_OPEN",    "path": "Movement",    "fmt": {"bix": 1,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Front left wheel speed?"},
+    {"id": "GX470_RR_WHEEL_SPEED_OPEN",    "path": "Movement",    "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear right wheel speed?"},
+    {"id": "GX470_RL_WHEEL_SPEED_OPEN",    "path": "Movement",    "fmt": {"bix": 3,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Rear left wheel speed?"},
+    {"id": "GX470_YAW_RATE_OPEN_ERROR",    "path": "Orientation", "fmt": {"bix": 5,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Yaw rate, error?"},
+    {"id": "GX470_DECELERATION_OPEN",      "path": "Orientation", "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Deceleration open"},
+    {"id": "GX470_MASTER_CYLINDER_OPEN",   "path": "Engine",      "fmt": {"bix": 8,  "len": 1, "max": 1, "unit": "noyes" }, "name": "Master cylinder open"},
+    {"id": "GX470_STROKE_OPEN",            "path": "Engine",      "fmt": {"bix": 10, "len": 1, "max": 1, "unit": "noyes" }, "name": "Stroke open"},
+    {"id": "GX470_FR_WHEEL_CYLINDER_OPEN", "path": "Tires",       "fmt": {"bix": 12, "len": 1, "max": 1, "unit": "noyes" }, "name": "Front right wheel cylinder open"},
+    {"id": "GX470_ACCUMULATOR_OPEN",       "path": "Engine",      "fmt": {"bix": 16, "len": 1, "max": 1, "unit": "noyes" }, "name": "Accumulator open"},
+    {"id": "GX470_HV_COMM_OPEN",           "path": "Engine",      "fmt": {"bix": 17, "len": 1, "max": 1, "unit": "noyes" }, "name": "Hydraulic valve, communication open"}
+  ]},
+{ "hdr": "7B0", "rax": "7B8", "dbg": true, "cmd": {"22": "1006"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_MASTER_CYL_TEMP", "path": "Engine", "fmt": { "len": 8, "max": 100, "min": -20, "add": -80, "unit": "celsius" }, "name": "Master cylinder sensor temperature"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "12"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_TAIL_CANCEL_LIGHT",       "path": "Lights", "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "offon" }, "name": "Tail cancel SW"},
+    {"id": "GX470_P_SEATBELT_BUCKLE_LIGHT", "path": "Lights", "fmt": {"bix": 8,  "len": 1, "max": 1, "unit": "offon" }, "name": "P-seatbelt buckle SW"},
+    {"id": "GX470_CHECK_ENGINE_LIGHT",      "path": "Lights", "fmt": {"bix": 15, "len": 1, "max": 1, "unit": "offon" }, "name": "Check engine SW"},
+    {"id": "GX470_EOP_LIGHT",               "path": "Lights", "fmt": {"bix": 35, "len": 1, "max": 1, "unit": "offon" }, "name": "Oil pressure switch"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "13"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_BAT_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Battery voltage"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "21"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_VSS_7C0", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "23"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ECT_7C0", "path": "Engine", "fmt": { "len": 8, "max": 127.5, "div": 2, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "29"}, "freq": 5, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_FLI_VOL", "path": "Fuel", "fmt": { "len": 8, "max": 21, "mul": 500, "div": 3785, "unit": "gallons" }, "name": "Fuel level volume", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "41"}, "freq": 30,
+  "signals": [
+    {"id": "GX470_OIL_CHANGE_ODO", "path": "Fluids", "fmt": { "len": 8, "max": 41038.272, "mul": 2514600, "div": 15625, "unit": "kilometers" }, "name": "Distance since oil change"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "68"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_RHEOSTAT", "path": "Lights", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Rheostat", "description": "Higher values are brighter"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "A1"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_KEY_REMIND_SOUND", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Key remind sound"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "A7"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_SEAT_BELT_BEEP_DRIVER",    "path": "Seatbelts", "fmt": {          "len": 1, "max": 1, "unit": "offon" }, "name": "Seat belt beep, driver"},
+    {"id": "GX470_SEAT_BELT_BEEP_PASSENGER", "path": "Seatbelts", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Seat belt beep, passenger"},
+    {"id": "GX470_SEAT_BELT_BEEP_REMINDER",  "path": "Seatbelts", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Seat belt beep, reminder"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"21": "AC"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_REVERSE_BEEP", "path": "Seatbelts", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "onoff" }, "name": "Reverse beep"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1021"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_BATTERY_VOLTAGE_7C0", "path": "Electrical", "fmt": { "len": 8, "max": 20, "div": 10, "unit": "volts" }, "name": "B+ battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "7C0", "rax": "7C8", "dbg": true, "cmd": {"22": "1022"}, "freq": 30,
+  "signals": [
+    {"id": "GX470_FUEL_LEVEL", "path": "Fuel", "fmt": { "len": 16, "max": 655.35, "div": 100, "nullmax": 655.35, "unit": "liters" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "7C4", "dbg": true, "cmd": {"21": "43"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_AIR_OUTLET_SERVO_PULSE_D",      "path": "Climate", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Air outlet servo pulse, driver"},
+    {"id": "GX470_AIR_OUTLET_SERVO_ACTU_PULSE_D", "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Air outlet servo actual pulse, driver"}
+  ]},
+{ "hdr": "7C4", "dbg": true, "cmd": {"21": "44"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_AIR_INLET_DAMPER_TARGET_PULSE", "path": "Climate", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Air inlet damper target pulse"},
+    {"id": "GX470_AIR_INLET_DAMPER_ACTUAL_PULSE", "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Air inlet damper actual pulse"}
+  ]},
+{ "hdr": "7C4", "dbg": true, "cmd": {"21": "4C"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_EVAP_TARGET_T", "path": "Climate", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "add": -327.68, "unit": "scalar" }, "name": "Evaporator target temperature"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "21"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_CABIN_T", "path": "Climate", "fmt": { "len": 8, "max": 57.25, "min": -6.5, "mul": 63.75, "div": 255, "add": -6.5, "unit": "celsius" }, "name": "Cabin temperature"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "22"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_AAT_7C4", "path": "Climate", "fmt": { "len": 8, "max": 65.95, "min": -23.3, "mul": 89.25, "div": 255, "add": -23.3, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "24"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_SOLAR_DRIVER", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Solar sensor, driver side"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "26"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ECT", "path": "Engine", "fmt": { "len": 8, "max": 90.55, "min": 1.3, "mul": 89.25, "div": 255, "add": 1.3, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "29"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_T_DRIVER", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "celsius" }, "name": "Set temperature, driver side"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "3C"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_BLOWER_MOTOR_SPEED_LEVEL", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Blower motor speed level"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "3D"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ADJUSTED_AMBIENT_T", "path": "Climate", "fmt": { "len": 8, "max": 50.8, "min": -30.8, "mul": 81.6, "div": 255, "add": -30.8, "unit": "celsius" }, "name": "Adjusted ambient temperature"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "4B"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_EVAP_FIN_THERMISTOR", "path": "Climate", "fmt": { "len": 8, "max": 59.55, "min": -29.7, "mul": 89.25, "div": 255, "add": -29.7, "unit": "celsius" }, "name": "Evaporator fin thermistor"}
+  ]},
+{ "hdr": "7C4", "rax": "7CC", "dbg": true, "cmd": {"21": "53"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_REGULATOR_P", "path": "Engine", "fmt": { "len": 8, "max": 3294, "min": -456.68, "mul": 375105, "div": 25500, "add": -456.68, "unit": "kilopascal" }, "name": "Regulator pressure"}
+  ]},
+{ "hdr": "7D0", "rax": "7D8", "dbg": true, "cmd": {"21": "62"}, "freq": 1, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_PARKING_BRAKE", "path": "Control", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "offon" }, "name": "Parking brake"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "01"}, "freq": 1, "filter": { "to": 2019 }, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_LOAD",    "path": "Engine",   "fmt": {           "len": 8,  "max": 100,                  "mul": 100, "div": 255,             "unit": "percent"           }, "name": "Calculated load",            "suggestedMetric": "engineLoad"},
+    {"id": "GX470_MAF",     "path": "Engine",   "fmt": {"bix": 24, "len": 16, "max": 655.35,                           "div": 100,             "unit": "gramsPerSecond"    }, "name": "Mass air flow",              "suggestedMetric": "massAirFlow"},
+    {"id": "GX470_IAT",     "path": "Engine",   "fmt": {"bix": 40, "len": 8,  "max": 215,      "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Intake air temperature"},
+    {"id": "GX470_BARO",    "path": "Engine",   "fmt": {"bix": 48, "len": 8,  "max": 255,                                                      "unit": "kilopascal"        }, "name": "Barometric pressure"},
+    {"id": "GX470_ECT_7E0", "path": "Engine",   "fmt": {"bix": 56, "len": 8,  "max": 215,      "min": -40,                         "add": -40, "unit": "celsius"           }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"},
+    {"id": "GX470_RPM",     "path": "Movement", "fmt": {"bix": 64, "len": 16, "max": 16383.75,                         "div": 4,               "unit": "rpm"               }, "name": "Engine speed",               "suggestedMetric": "engineSpeed"},
+    {"id": "GX470_VSS_7E0", "path": "Movement", "fmt": {"bix": 80, "len": 8,  "max": 255,                                                      "unit": "kilometersPerHour" }, "name": "Vehicle speed",              "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "03"}, "freq": 1, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_SHORT_FT_B1", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 99.21, "min": -100, "mul": 200, "div": 256, "add": -100, "unit": "percent" }, "name": "Short term fuel trim, bank 1", "suggestedMetric": "shortTermFuelTrim"},
+    {"id": "GX470_LONG_FT_B1",  "path": "Engine", "fmt": {"bix": 24, "len": 8, "max": 99.21, "min": -100, "mul": 200, "div": 256, "add": -100, "unit": "percent" }, "name": "Long term fuel trim, bank 1"},
+    {"id": "GX470_SHORT_FT_B2", "path": "Engine", "fmt": {"bix": 32, "len": 8, "max": 99.21, "min": -100, "mul": 200, "div": 256, "add": -100, "unit": "percent" }, "name": "Short term fuel trim, bank 2", "suggestedMetric": "shortTermFuelTrim"},
+    {"id": "GX470_LONG_FT_B2",  "path": "Engine", "fmt": {"bix": 40, "len": 8, "max": 99.21, "min": -100, "mul": 200, "div": 256, "add": -100, "unit": "percent" }, "name": "Long term fuel trim, bank 2"},
+    {"id": "GX470_IGN_ADVANCE", "path": "Engine", "fmt": {"bix": 48, "len": 8, "max": 63.5,  "min": -64,              "div": 2,   "add": -64,  "unit": "degrees" }, "name": "Ignition timing advance"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "04"}, "freq": 1, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_LAMBDA_TARGET",  "path": "Fuel",   "fmt": {            "len": 16, "max": 1.99,                "mul": 1.99, "div": 65535,              "unit": "scalar"    }, "name": "Target air-fuel equivalence ratio"},
+    {"id": "GX470_AF_LAMBDA_B1S1", "path": "Engine", "fmt": {"bix": 16,  "len": 16, "max": 1.99,                "mul": 1.99, "div": 65535,              "unit": "scalar"    }, "name": "Air-fuel equivalence ratio, bank 1 sensor 1", "suggestedMetric": "o2Lambda"},
+    {"id": "GX470_AFS_V_B1S1",     "path": "Engine", "fmt": {"bix": 32,  "len": 16, "max": 7.99,                "mul": 7.99, "div": 65535,              "unit": "volts"     }, "name": "Air-fuel sensor voltage, bank 1 sensor 1"},
+    {"id": "GX470_AFS_I_B1S1",     "path": "Engine", "fmt": {"bix": 96,  "len": 16, "max": 127.99, "min": -128,              "div": 256,   "add": -128, "unit": "milliamps" }, "name": "Air-fuel sensor current, bank 1 sensor 1"},
+    {"id": "GX470_O2S_B1S2",       "path": "Engine", "fmt": {"bix": 144, "len": 8,  "max": 1.275,               "mul": 5,    "div": 1000,               "unit": "volts"     }, "name": "Oxygen sensor voltage, bank 1 sensor 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "05"}, "freq": 5, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_CAT_T_B1S1", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 6513.5, "min": -40, "div": 10, "add": -40, "unit": "celsius" }, "name": "Catalyst temperature, bank 1 sensor 1"},
+    {"id": "GX470_CAT_T_B1S2", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 6513.5, "min": -40, "div": 10, "add": -40, "unit": "celsius" }, "name": "Catalyst temperature, bank 1 sensor 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "06"}, "freq": 1, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_MIL",                            "path": "DTCs", "fmt": {           "len": 1,  "max": 1,     "unit": "offon"      }, "name": "MIL"},
+    {"id": "GX470_NUMBER_OF_EMISSION_DTC",         "path": "DTCs", "fmt": {"bix": 1,  "len": 7,  "max": 127,   "unit": "scalar"     }, "name": "Number of emission DTC"},
+    {"id": "GX470_COMPLETE_PARTS_MONITOR_AVAIL",   "path": "DTCs", "fmt": {"bix": 13, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Complete parts monitor available?"},
+    {"id": "GX470_FUEL_SYSTEM_MONITOR_AVAIL",      "path": "DTCs", "fmt": {"bix": 14, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Fuel system monitor available?"},
+    {"id": "GX470_MISFIRE_MONITOR_AVAIL",          "path": "DTCs", "fmt": {"bix": 15, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Misfire monitor available?"},
+    {"id": "GX470_EGR_VVT_MONITOR_AVAIL",          "path": "DTCs", "fmt": {"bix": 16, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "EGR/VVT monitor available?"},
+    {"id": "GX470_O2S_A_FS_HEATER_MONITOR_AVAIL",  "path": "DTCs", "fmt": {"bix": 17, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "O2S heater monitor available?"},
+    {"id": "GX470_O2S_A_FS_MONITOR_AVAIL",         "path": "DTCs", "fmt": {"bix": 18, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "O2S monitor available?"},
+    {"id": "GX470_A_C_MONITOR_AVAIL",              "path": "DTCs", "fmt": {"bix": 19, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "A/C monitor available?"},
+    {"id": "GX470_2ND_AIR_MONITOR_AVAIL",          "path": "DTCs", "fmt": {"bix": 20, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "2nd air monitor available?"},
+    {"id": "GX470_EVAP_MONITOR_AVAIL",             "path": "DTCs", "fmt": {"bix": 21, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "EVAP monitor available?"},
+    {"id": "GX470_HEATED_CATALYST_MONITOR_AVAIL",  "path": "DTCs", "fmt": {"bix": 22, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Heated catalyst monitor available?"},
+    {"id": "GX470_CATALYST_MONITOR_AVAIL",         "path": "DTCs", "fmt": {"bix": 23, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Catalyst monitor available?"},
+    {"id": "GX470_EGR_VVT_MONITOR_INCMPL",         "path": "DTCs", "fmt": {"bix": 24, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "EGR/VVT monitor incomplete?"},
+    {"id": "GX470_O2S_A_FS_HEATER_MONITOR_INCMPL", "path": "DTCs", "fmt": {"bix": 25, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "O2S heater monitor incomplete?"},
+    {"id": "GX470_O2S_A_FS_MONITOR_INCMPL",        "path": "DTCs", "fmt": {"bix": 26, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "O2S monitor incomplete?"},
+    {"id": "GX470_A_C_MONITOR_INCMPL",             "path": "DTCs", "fmt": {"bix": 27, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "A/C monitor incomplete?"},
+    {"id": "GX470_2ND_AIR_MONITOR_INCMPL",         "path": "DTCs", "fmt": {"bix": 28, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "2nd air monitor incomplete?"},
+    {"id": "GX470_EVAP_MONITOR_ICMPL",             "path": "DTCs", "fmt": {"bix": 29, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "EVAP monitor_icmpl"},
+    {"id": "GX470_HEATED_CATALYST_MONITOR_INCMPL", "path": "DTCs", "fmt": {"bix": 30, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Heated catalyst monitor incomplete?"},
+    {"id": "GX470_CATALYST_MONITOR_INCMPL",        "path": "DTCs", "fmt": {"bix": 31, "len": 1,  "max": 1,     "unit": "noyes"      }, "name": "Catalyst monitor incomplete?"},
+    {"id": "GX470_MILON_RUN_DISTANCE",             "path": "DTCs", "fmt": {"bix": 48, "len": 16, "max": 65535, "unit": "kilometers" }, "name": "MIL ON run distance"},
+    {"id": "GX470_RUNNING_TIME_FROM_MIL_ON",       "path": "DTCs", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "minutes"    }, "name": "Running time from MIL ON"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "21"}, "freq": 1, "filter": { "to": 2018 }, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_CC_S", "path": "Cruise control", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "24"}, "freq": 5, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_COMMUNICATION_WITH_HV",     "path": "Climate", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon"  }, "name": "Communication with HV"},
+    {"id": "GX470_COMMUNICATION_WITH_BRAKE",  "path": "Control", "fmt": {"bix": 4, "len": 1, "max": 1, "unit": "offon"  }, "name": "Communication with brake"},
+    {"id": "GX470_COMM_WITH_AIR_CONDITIONER", "path": "Climate", "fmt": {"bix": 5, "len": 1, "max": 1, "unit": "offon"  }, "name": "Communication with air conditioner"},
+    {"id": "GX470_COMM_WITH_VALVEMATIC_COMM", "path": "Climate", "fmt": {"bix": 6, "len": 1, "max": 1, "unit": "scalar" }, "name": "Communication with valvematic"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "25"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_POWER_STEERING_SIGNAL",                   "path": "Control", "fmt": {"bix": 4,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Power steering"},
+    {"id": "GX470_STOP_LIGHT_SWITCH",                       "path": "Lights",  "fmt": {"bix": 5,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Stop light"},
+    {"id": "GX470_CRUISE_CONTROL_LIVE_BRAKE_CANCEL_SWITCH", "path": "Control", "fmt": {"bix": 6,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Cruise control live brake cancel"},
+    {"id": "GX470_STARTER_SIGNAL",                          "path": "Control", "fmt": {"bix": 11, "len": 1, "max": 1, "unit": "scalar" }, "name": "Starter signal"},
+    {"id": "GX470_STARTER_CONTROL",                         "path": "Control", "fmt": {"bix": 12, "len": 1, "max": 1, "unit": "scalar" }, "name": "Starter control"},
+    {"id": "GX470_ELECTRICAL_LOAD_SIGNAL_1",                "path": "Control", "fmt": {"bix": 16, "len": 1, "max": 1, "unit": "scalar" }, "name": "Electrical load signal 1"},
+    {"id": "GX470_ELECTRICAL_LOAD_SIGNAL_2",                "path": "Control", "fmt": {"bix": 17, "len": 1, "max": 1, "unit": "scalar" }, "name": "Electrical load signal 2"},
+    {"id": "GX470_SHIFT_SW_STATUS_P_RANGE",                 "path": "Control", "fmt": {"bix": 24, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, parking"},
+    {"id": "GX470_SHIFT_SW_STATUS_R_RANGE",                 "path": "Control", "fmt": {"bix": 25, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, reverse"},
+    {"id": "GX470_SHIFT_SW_STATUS_N_RANGE",                 "path": "Control", "fmt": {"bix": 26, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, neutral"},
+    {"id": "GX470_SHIFT_SW_STATUS_D_RANGE",                 "path": "Control", "fmt": {"bix": 27, "len": 1, "max": 1, "unit": "scalar" }, "name": "Shift SW status, drive"},
+    {"id": "GX470_SPORTS_MODE_SELECTION_SW",                "path": "Control", "fmt": {"bix": 32, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports mode selection"},
+    {"id": "GX470_SPORTS_SHIFT_UP_SW",                      "path": "Control", "fmt": {"bix": 33, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports shift up"},
+    {"id": "GX470_SPORTS_SHIFT_DOWN_SW",                    "path": "Control", "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "scalar" }, "name": "Sports shift down"},
+    {"id": "GX470_PATTERN_SWITCH_PWR_M",                    "path": "Control", "fmt": {"bix": 42, "len": 1, "max": 1, "unit": "scalar" }, "name": "Pattern switch"},
+    {"id": "GX470_NEUTRAL_POSITION_SW_SIGNAL",              "path": "Control", "fmt": {"bix": 53, "len": 1, "max": 1, "unit": "scalar" }, "name": "Neutral position"},
+    {"id": "GX470_TC_TERMINAL",                             "path": "Control", "fmt": {"bix": 61, "len": 1, "max": 1, "unit": "scalar" }, "name": "TC"},
+    {"id": "GX470_A_C_COMPRESSOR",                          "path": "Control", "fmt": {"bix": 64, "len": 1, "max": 1, "unit": "offon"  }, "name": "A/C compressor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "28"}, "freq": 3600, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_ENG_BLOCK_28_RAW", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine computer block 28 raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "2E"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_EVAP_PURGE_DUTY_7E0", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 20, "div": 51, "unit": "percent" }, "name": "Evaporative purge duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "31"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_VALVEMATIC_CURRENT", "path": "Engine", "fmt": { "len": 16, "max": 639.9, "mul": 5, "div": 512, "unit": "degrees" }, "name": "Valvematic current angle"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "37"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_INITIAL_ECT",            "path": "Engine", "fmt": {            "len": 8,  "max": 119.3,  "min": -40,   "mul": 531,  "div": 850,   "add": -40,   "unit": "scalar"     }, "name": "Initial engine coolant temperature"},
+    {"id": "GX470_INITIAL_IAT",            "path": "Engine", "fmt": {"bix": 8,   "len": 8,  "max": 119,    "min": -40,   "mul": 5,    "div": 8,     "add": -40,   "unit": "celsius"    }, "name": "Initial intake air temperature"},
+    {"id": "GX470_KNOCK_CORRECT_LEARN",    "path": "Engine", "fmt": {"bix": 16,  "len": 16, "max": 1023,   "min": -1024,              "div": 32,    "add": -1024, "unit": "degrees"    }, "name": "Knock correct learn value"},
+    {"id": "GX470_KNOCK_ADJUST_7E0",       "path": "Engine", "fmt": {"bix": 32,  "len": 16, "max": 1024,   "min": -1024, "mul": 2048, "div": 65535, "add": -1024, "unit": "degrees"    }, "name": "Knock adjust"},
+    {"id": "GX470_KNOCK_FEEDBACK_7E0",     "path": "Engine", "fmt": {"bix": 48,  "len": 16, "max": 1024,   "min": -1024, "mul": 2048, "div": 65535, "add": -1024, "unit": "degrees"    }, "name": "Knock feedback"},
+    {"id": "GX470_EVAP_PURGE_FLOW",        "path": "Engine", "fmt": {"bix": 64,  "len": 16, "max": 399.99,               "mul": 25,   "div": 4096,                "unit": "percent"    }, "name": "Evaporative purge flow"},
+    {"id": "GX470_IG_OFF_ELAPSED_TIME",    "path": "Engine", "fmt": {"bix": 80,  "len": 16, "max": 655350,               "mul": 10,                               "unit": "minutes"    }, "name": "IG OFF elapsed time"},
+    {"id": "GX470_DIST_BATT_CABLE",        "path": "Engine", "fmt": {"bix": 96,  "len": 16, "max": 65535,                                                         "unit": "kilometers" }, "name": "Dist battery cable disconnect"},
+    {"id": "GX470_IMMOBILIZER_ON",         "path": "Engine", "fmt": {"bix": 120, "len": 1,  "max": 1,                                                             "unit": "scalar"     }, "name": "Immobilizer communication on"},
+    {"id": "GX470_FUEL_CUT_7E0",           "path": "Fuel",   "fmt": {"bix": 121, "len": 1,  "max": 1,                                                             "unit": "offon"      }, "name": "Fuel cut"},
+    {"id": "GX470_CLOSED_THROTTLE_POS_ON", "path": "Engine", "fmt": {"bix": 125, "len": 1,  "max": 1,                                                             "unit": "scalar"     }, "name": "Closed throttle position switch on"},
+    {"id": "GX470_FC_TAU_ON",              "path": "Engine", "fmt": {"bix": 127, "len": 1,  "max": 1,                                                             "unit": "scalar"     }, "name": "Fuel cut TAU on"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "39"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_ACIS_VSV_ON",           "path": "Engine",       "fmt": {"bix": 3,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Acoustic control induction system vacuum switching valve on"},
+    {"id": "GX470_EVAP_PURGE_VSV_ON",     "path": "Engine",       "fmt": {"bix": 11, "len": 1, "max": 1, "unit": "scalar" }, "name": "Evaporative purge vacuum switching valve on"},
+    {"id": "GX470_FUEL_PMP_SPD_STAT_ON",  "path": "Fuel",         "fmt": {"bix": 14, "len": 1, "max": 1, "unit": "scalar" }, "name": "Fuel pump/speed status on"},
+    {"id": "GX470_VARIABLE_VLV_TIM_1_ON", "path": "Engine",       "fmt": {"bix": 22, "len": 1, "max": 1, "unit": "scalar" }, "name": "Variable valve timing control status 1 on"},
+    {"id": "GX470_TQ_CONV_TE1_ON",        "path": "Transmission", "fmt": {"bix": 30, "len": 1, "max": 1, "unit": "scalar" }, "name": "Torque converter and TE1 on"},
+    {"id": "GX470_ELEC_FAN_MOTOR_ON",     "path": "Engine",       "fmt": {"bix": 34, "len": 1, "max": 1, "unit": "scalar" }, "name": "Electric fan motor on"},
+    {"id": "GX470_ACC_RELAY_ON",          "path": "Engine",       "fmt": {"bix": 46, "len": 1, "max": 1, "unit": "scalar" }, "name": "Accessory relay on"},
+    {"id": "GX470_STARTER_RELAY_ON",      "path": "Engine",       "fmt": {"bix": 47, "len": 1, "max": 1, "unit": "scalar" }, "name": "Starter relay on"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3A"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_VALVEMATIC_TGT_ANG", "path": "Engine", "fmt": {           "len": 16, "max": 639.9, "mul": 5,  "div": 512,   "unit": "degrees" }, "name": "Valvematic, target angle"},
+    {"id": "GX470_PURGE_CUT_VSV_DUTY", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "Purge cut vacuum switching valve duty"},
+    {"id": "GX470_F_HEATER_DUTY_B1S1", "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 399.9, "mul": 25, "div": 4096,  "unit": "percent" }, "name": "A/F heater duty bank 1 sensor 1"},
+    {"id": "GX470_O2_HEATER_CURR_VAL", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 4.999,            "div": 13107, "unit": "amps"    }, "name": "O2 heater current val bank 1 sensor 2"},
+    {"id": "GX470_O2_HEATER_B1S2",     "path": "Engine", "fmt": {"bix": 68, "len": 1,  "max": 1,                              "unit": "scalar"  }, "name": "O2 heater b1s2_active"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "3E"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_CAT_T_B1S2_V2", "path": "Engine", "fmt": { "len": 16, "max": 6513.5, "min": -40, "div": 10, "add": -40, "unit": "celsius" }, "name": "Catalyst temperature, bank 1 sensor 2, variant 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "41"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_THROTTLE_SENS_OPEN_1",      "path": "Engine",   "fmt": {            "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle sensor open position 1"},
+    {"id": "GX470_THROTTLE_SENS_OPEN_2",      "path": "Engine",   "fmt": {"bix": 8,   "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle sensor open position 2"},
+    {"id": "GX470_ACCEL_FULLY_CLOSE_1",       "path": "Movement", "fmt": {"bix": 16,  "len": 8,  "max": 124.5,  "mul": 125, "div": 256,  "unit": "degrees" }, "name": "Accelerator fully close learn 1"},
+    {"id": "GX470_ACCEL_FULLY_CLOSE_2",       "path": "Movement", "fmt": {"bix": 24,  "len": 8,  "max": 124.5,  "mul": 125, "div": 256,  "unit": "degrees" }, "name": "Accelerator fully close learn 2"},
+    {"id": "GX470_THROTTLE_POS_COMMAND",      "path": "Engine",   "fmt": {"bix": 32,  "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle position command"},
+    {"id": "GX470_ACCEL_POS",                 "path": "Movement", "fmt": {"bix": 40,  "len": 16, "max": 399.9,  "mul": 25,  "div": 4096, "unit": "percent" }, "name": "Accelerator position"},
+    {"id": "GX470_BM_V",                      "path": "Battery",  "fmt": {"bix": 56,  "len": 16, "max": 79.998, "mul": 5,   "div": 4096, "unit": "volts"   }, "name": "+BM voltage"},
+    {"id": "GX470_ACCEL_SENS_OUT_1",          "path": "Movement", "fmt": {"bix": 72,  "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Accelerator sensor out, number 1"},
+    {"id": "GX470_ACCEL_SENS_OUT_2",          "path": "Movement", "fmt": {"bix": 80,  "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Accelerator sensor out, number 2"},
+    {"id": "GX470_THROTTLE_POS_NUMBER_1",     "path": "Engine",   "fmt": {"bix": 88,  "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle position, number 1"},
+    {"id": "GX470_THROTTLE_POS_NUMBER_2",     "path": "Engine",   "fmt": {"bix": 96,  "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle position, number 2"},
+    {"id": "GX470_THROTTLE_REQUIRE_POS",      "path": "Engine",   "fmt": {"bix": 104, "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle require position"},
+    {"id": "GX470_THROTTLE_FULLY_CLOSE",      "path": "Engine",   "fmt": {"bix": 112, "len": 8,  "max": 4.98,   "mul": 5,   "div": 256,  "unit": "volts"   }, "name": "Throttle fully close learn"},
+    {"id": "GX470_THROTTLE_MOTOR_DUTY_OPEN",  "path": "Engine",   "fmt": {"bix": 120, "len": 8,  "max": 255,                             "unit": "percent" }, "name": "Throttle motor duty, open"},
+    {"id": "GX470_THROTTLE_MOTOR_DUTY_CLOSE", "path": "Engine",   "fmt": {"bix": 128, "len": 8,  "max": 255,                             "unit": "percent" }, "name": "Throttle motor duty, close"},
+    {"id": "GX470_THROTTLE_MOTOR",            "path": "Engine",   "fmt": {"bix": 136, "len": 8,  "max": 19.9,   "mul": 5,   "div": 64,   "unit": "amps"    }, "name": "Throttle motor current"},
+    {"id": "GX470_SYSTEM_GUARD_ON",           "path": "Engine",   "fmt": {"bix": 144, "len": 1,  "max": 1,                               "unit": "scalar"  }, "name": "System guard on"},
+    {"id": "GX470_OPEN_SIDE_ON",              "path": "Engine",   "fmt": {"bix": 145, "len": 1,  "max": 1,                               "unit": "scalar"  }, "name": "Open side malfunction on"},
+    {"id": "GX470_ACTUATOR_POWER_SUP_ON",     "path": "Engine",   "fmt": {"bix": 146, "len": 1,  "max": 1,                               "unit": "scalar"  }, "name": "Actuator power supply on"},
+    {"id": "GX470_ACCEL_IDLE_POS_ON",         "path": "Movement", "fmt": {"bix": 148, "len": 1,  "max": 1,                               "unit": "scalar"  }, "name": "Accelerator idle position on"},
+    {"id": "GX470_THROTTLE_IDLE_POS_ON",      "path": "Engine",   "fmt": {"bix": 149, "len": 1,  "max": 1,                               "unit": "scalar"  }, "name": "Throttle idle position on"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "42"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_BAT_CURRENT",         "path": "Battery", "fmt": {           "len": 16, "max": 124.9,  "min": -125, "mul": 50, "div": 13107, "add": -125, "unit": "amps"    }, "name": "Battery current"},
+    {"id": "GX470_BAT_T",               "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 6513.5,                                                    "unit": "celsius" }, "name": "Battery temperature"},
+    {"id": "GX470_ALT_VOL_NON_ACTIVE",  "path": "Engine",  "fmt": {"bix": 32, "len": 16, "max": 79.998,              "mul": 5,  "div": 4096,               "unit": "volts"   }, "name": "Alt voltage - non active test"},
+    {"id": "GX470_ALT_VOL_ACTIVE_TEST", "path": "Engine",  "fmt": {"bix": 48, "len": 16, "max": 79.998,              "mul": 5,  "div": 4096,               "unit": "volts"   }, "name": "Alt voltage - active test"},
+    {"id": "GX470_ALTERNATOR_OUTPUT",   "path": "Engine",  "fmt": {"bix": 64, "len": 16, "max": 399.9,               "mul": 25, "div": 4096,               "unit": "percent" }, "name": "Alternator output duty"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "45"}, "freq": 1, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_MISFIRE_RPM",               "path": "Movement",        "fmt": {"bix": 8,  "len": 8,  "max": 6375,               "mul": 25,                          "unit": "rpm"     }, "name": "Misfire RPM"},
+    {"id": "GX470_MISFIRE_LOAD",              "path": "Engine.Misfires", "fmt": {"bix": 16, "len": 8,  "max": 3.98,               "mul": 4,  "div": 256,              "unit": "scalar"  }, "name": "Misfire load"},
+    {"id": "GX470_CYL1_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 24, "len": 8,  "max": 255,                                                    "unit": "scalar"  }, "name": "Cylinder #1 misfire count"},
+    {"id": "GX470_CYL2_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 32, "len": 8,  "max": 255,                                                    "unit": "scalar"  }, "name": "Cylinder #2 misfire count"},
+    {"id": "GX470_CYL3_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 40, "len": 8,  "max": 255,                                                    "unit": "scalar"  }, "name": "Cylinder #3 misfire count"},
+    {"id": "GX470_CYL4_MISFIRE_CNT",          "path": "Engine.Misfires", "fmt": {"bix": 48, "len": 8,  "max": 255,                                                    "unit": "scalar"  }, "name": "Cylinder #4 misfire count"},
+    {"id": "GX470_ALL_CYLINDERS_MISFIRE_CNT", "path": "Engine.Misfires", "fmt": {"bix": 56, "len": 8,  "max": 255,                                                    "unit": "scalar"  }, "name": "All cylinders misfire count"},
+    {"id": "GX470_IGNITION_TRIG_CNT",         "path": "Control",         "fmt": {"bix": 64, "len": 16, "max": 65535,                                                  "unit": "scalar"  }, "name": "Ignition trigger count"},
+    {"id": "GX470_MISFIRE_MARGIN",            "path": "Engine.Misfires", "fmt": {"bix": 80, "len": 8,  "max": 127,   "min": -128,                        "add": -128, "unit": "percent" }, "name": "Misfire margin"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "47"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_EGR_STEP_POSITION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation step position"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "51"}, "freq": 1, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_PREV_TRIP_DST", "path": "Trips",  "fmt": {"bix": 40, "len": 16, "max": 655.35,             "div": 100,             "unit": "kilometers" }, "name": "Previous trip distance"},
+    {"id": "GX470_VVTOT",         "path": "Engine", "fmt": {"bix": 56, "len": 8,  "max": 215,    "min": -40,             "add": -40, "unit": "celsius"    }, "name": "Variable valve timing oil temperature"},
+    {"id": "GX470_EOT",           "path": "Engine", "fmt": {"bix": 72, "len": 8,  "max": 215,    "min": -40,             "add": -40, "unit": "celsius"    }, "name": "Engine oil temperature",                "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "52"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_IDLE_SPARK_ADVN_CTRL_1", "path": "Engine",   "fmt": {           "len": 8,  "max": 15.93,                              "div": 16,               "unit": "degrees" }, "name": "Idle spark advance control 1"},
+    {"id": "GX470_IDLE_SPARK_ADVN_CTRL_2", "path": "Engine",   "fmt": {"bix": 8,  "len": 8,  "max": 15.93,                              "div": 16,               "unit": "degrees" }, "name": "Idle spark advance control 2"},
+    {"id": "GX470_IDLE_SPARK_ADVN_CTRL_3", "path": "Engine",   "fmt": {"bix": 16, "len": 8,  "max": 15.93,                              "div": 16,               "unit": "degrees" }, "name": "Idle spark advance control 3"},
+    {"id": "GX470_IDLE_SPARK_ADVN_CTRL_4", "path": "Engine",   "fmt": {"bix": 24, "len": 8,  "max": 15.93,                              "div": 16,               "unit": "degrees" }, "name": "Idle spark advance control 4"},
+    {"id": "GX470_MIN_RPM",                "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 51199,                  "mul": 25,  "div": 32,               "unit": "rpm"     }, "name": "Minimum engine speed"},
+    {"id": "GX470_ENG_STALL_CTRL_FB",      "path": "Engine",   "fmt": {"bix": 48, "len": 16, "max": 39.99,      "min": -40, "mul": 5,   "div": 4096, "add": -40, "unit": "scalar"  }, "name": "Engine stall control FB flow"},
+    {"id": "GX470_FUEL_CUT_TIME",          "path": "Fuel",     "fmt": {"bix": 64, "len": 16, "max": 68734.9511,             "mul": 537, "div": 512,              "unit": "scalar"  }, "name": "Fuel cut time"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "54"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_RPM_CYL_1",      "path": "Movement", "fmt": {           "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 1"},
+    {"id": "GX470_RPM_CYL_2",      "path": "Movement", "fmt": {"bix": 16, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 2"},
+    {"id": "GX470_RPM_CYL_3",      "path": "Movement", "fmt": {"bix": 32, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 3"},
+    {"id": "GX470_RPM_CYL_4",      "path": "Movement", "fmt": {"bix": 48, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Engine speed of cylinder 4"},
+    {"id": "GX470_AV_RPM_ALL_CYL", "path": "Movement", "fmt": {"bix": 64, "len": 16, "max": 51199, "mul": 25, "div": 32, "unit": "rpm" }, "name": "Average engine speed of all cylinders", "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "81"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_SPD_NT",      "path": "Engine",  "fmt": {           "len": 8,  "max": 12750, "mul": 50,               "unit": "rpm"   }, "name": "Turbine speed"},
+    {"id": "GX470_NT_SENS_V",   "path": "Battery", "fmt": {"bix": 8,  "len": 16, "max": 4.999,            "div": 13107, "unit": "volts" }, "name": "Turbine speed sensor voltage"},
+    {"id": "GX470_SPD_NIN",     "path": "Engine",  "fmt": {"bix": 24, "len": 8,  "max": 12750, "mul": 50,               "unit": "rpm"   }, "name": "Input shaft speed"},
+    {"id": "GX470_SPD_NOUT",    "path": "Engine",  "fmt": {"bix": 32, "len": 8,  "max": 12750, "mul": 50,               "unit": "rpm"   }, "name": "Output shaft speed"},
+    {"id": "GX470_NOUT_SENS_V", "path": "Battery", "fmt": {"bix": 40, "len": 16, "max": 4.999,            "div": 13107, "unit": "volts" }, "name": "Output speed sensor voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "82"}, "freq": 1, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_ATF_PAN_T", "path": "Transmission", "fmt": {           "len": 16, "max": 215, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission temperature, pan",              "suggestedMetric": "transmissionFluidTemperature"},
+    {"id": "GX470_ATF_TQC_T", "path": "Transmission", "fmt": {"bix": 16, "len": 16, "max": 215, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission temperature, torque converter", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "83"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_TRANS_OIL_PRESS",    "path": "Transmission", "fmt": {"bix": 1, "len": 1,  "max": 1,                             "unit": "scalar" }, "name": "Transmission oil pressure calibration, complete"},
+    {"id": "GX470_G_SENS_CALIBRATION", "path": "Engine",       "fmt": {"bix": 2, "len": 1,  "max": 1,                             "unit": "scalar" }, "name": "G sensor calibration, complete"},
+    {"id": "GX470_G_SENS_LEARNING",    "path": "Engine",       "fmt": {"bix": 8, "len": 16, "max": 79.998, "mul": 5, "div": 4096, "unit": "volts"  }, "name": "G sensor learning value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "85"}, "freq": 0.4, "filter": { "from": 2007 },
+  "signals": [
+    {"id": "GX470_GEAR",       "path": "Transmission", "fmt": {          "len": 8, "max": 20, "unit": "scalar" }, "name": "Gear"},
+    {"id": "GX470_TQC_LOCKUP", "path": "Transmission", "fmt": {"bix": 8, "len": 1, "max": 1,  "unit": "offon"  }, "name": "Torque converter lock-up", "description": "Engages a clutch inside the torque converter to create a direct connection between the engine and transmission, reducing slippage and improving efficiency."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "B2"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_KNOCK_ADJUST",   "path": "Engine", "fmt": {           "len": 16, "max": 1984, "min": -64, "mul": 2048, "div": 65535, "add": -64, "unit": "degrees" }, "name": "Knock adjust"},
+    {"id": "GX470_KNOCK_FEEDBACK", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 1984, "min": -64, "mul": 2048, "div": 65535, "add": -64, "unit": "degrees" }, "name": "Knock feedback"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "C1"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_CYLINDER_NUMBER", "path": "Engine", "fmt": {"bix": 104, "len": 8, "max": 255,                            "unit": "scalar" }, "name": "Cylinder number"},
+    {"id": "GX470_DESTINATION",     "path": "Engine", "fmt": {"bix": 120, "len": 8, "max": 255,                            "unit": "scalar" }, "name": "Destination"},
+    {"id": "GX470_MODEL_YEAR",      "path": "Engine", "fmt": {"bix": 128, "len": 8, "max": 2155, "min": 1900, "add": 1900, "unit": "scalar" }, "name": "Model year"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D3"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_CRUISE_CTRL_SPD", "path": "Movement", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control speed"},
+    {"id": "GX470_CRUISE_CTRL_ON",  "path": "Engine",   "fmt": {"bix": 25, "len": 1, "max": 1,   "unit": "offon"             }, "name": "Cruise control on"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "D9"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ATF_T_V_14", "path": "Transmission", "fmt": {           "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 14"},
+    {"id": "GX470_ATF_T_V_21", "path": "Transmission", "fmt": {"bix": 24, "len": 8,  "max": 215,     "min": -40,             "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 21"},
+    {"id": "GX470_ATF_T_V_5",  "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 5"},
+    {"id": "GX470_ATF_T_V_8",  "path": "Transmission", "fmt": {"bix": 48, "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 8"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"21": "DA"}, "freq": 0.25, "dbgfilter": { "to": 2004, "from": 2007 },
+  "signals": [
+    {"id": "GX470_GEAR_V2", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Current gear"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "E1"}, "freq": 3600,
+  "signals": [
+    {"id": "GX470_CODES_INCLUDE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Codes, include history"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "E3"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_CHECK_MODE_ON",        "path": "Engine", "fmt": {           "len": 1, "max": 1, "unit": "scalar" }, "name": "Check mode on"},
+    {"id": "GX470_SPD_TEST_RESULT",      "path": "Engine", "fmt": {"bix": 2,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Vehicle speed sensor test result, incomplete"},
+    {"id": "GX470_MIS_TEST_RESULT",      "path": "Engine", "fmt": {"bix": 5,  "len": 1, "max": 1, "unit": "scalar" }, "name": "Misfire test result, incomplete"},
+    {"id": "GX470_OXS1_FS2_TEST_RESULT", "path": "Engine", "fmt": {"bix": 7,  "len": 1, "max": 1, "unit": "offon"  }, "name": "OXS1, A/FS2 test result, incomplete"},
+    {"id": "GX470_F_TEST_RESULTS_1",     "path": "Engine", "fmt": {"bix": 15, "len": 1, "max": 1, "unit": "scalar" }, "name": "A/F test results 1, incomplete"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "E6"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_IDLE_CTRL", "path": "Engine", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Idle control"},
+    {"id": "GX470_AC_COMP",   "path": "Engine", "fmt": {"bix": 2, "len": 1, "max": 1, "unit": "offon" }, "name": "Air conditioning compressor"},
+    {"id": "GX470_FUEL_CUT",  "path": "Fuel",   "fmt": {"bix": 9, "len": 1, "max": 1, "unit": "offon" }, "name": "Fuel cut"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"21": "F3"}, "freq": 1,
+  "signals": [
+    {"id": "GX470_FUEL_INJ_TIM", "path": "Fuel",   "fmt": {           "len": 8, "max": 32.64, "mul": 16, "div": 125, "unit": "milliseconds" }, "name": "Fuel injection timing"},
+    {"id": "GX470_INJ_WIDTH",    "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 32.64, "mul": 16, "div": 125, "unit": "milliseconds" }, "name": "Injector pulse width"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "82"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ATF_T_V_10_7E1", "path": "Transmission", "fmt": {           "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 10"},
+    {"id": "GX470_ATF_T_V_11",     "path": "Transmission", "fmt": {"bix": 16, "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 11"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "D9"}, "freq": 5,
+  "signals": [
+    {"id": "GX470_ATF_T_V_14_7E1", "path": "Transmission", "fmt": {           "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 14"},
+    {"id": "GX470_ATF_T_V_21_7E1", "path": "Transmission", "fmt": {"bix": 24, "len": 8,  "max": 215,     "min": -40,             "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 21"},
+    {"id": "GX470_ATF_T_V_9",      "path": "Transmission", "fmt": {"bix": 32, "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 9"},
+    {"id": "GX470_ATF_T_V_12",     "path": "Transmission", "fmt": {"bix": 48, "len": 16, "max": 215.996, "min": -40, "div": 256, "add": -40, "unit": "celsius" }, "name": "Transmission fluid temperature, variant 12"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "dbg": true, "cmd": {"21": "DA"}, "freq": 0.25,
+  "signals": [
+    {"id": "GX470_TQ_CONV_TURBINE_WHL", "path": "Tires", "fmt": { "len": 8, "max": 6, "mul": 12750, "unit": "rpm" }, "name": "Torque converter turbine wheel speed"}
+  ]},
+{ "hdr": "812A", "proto": "14230", "baud": 9600, "init": { "lo": 35, "hi": 15 }, "dbg": true, "cmd": {"21": "15"}, "freq": 15, "filter": { "from": 2003, "to": 2009 },
+  "signals": [
+    {"id": "GX470_TP_1_KL", "path": "Tires", "fmt": {           "len": 8, "max": 4.39875, "mul": 69, "div": 4000, "nullmin": 0, "unit": "bars" }, "name": "Tire pressure, sensor 1"},
+    {"id": "GX470_TP_2_KL", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 4.39875, "mul": 69, "div": 4000, "nullmin": 0, "unit": "bars" }, "name": "Tire pressure, sensor 2"},
+    {"id": "GX470_TP_3_KL", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 4.39875, "mul": 69, "div": 4000, "nullmin": 0, "unit": "bars" }, "name": "Tire pressure, sensor 3"},
+    {"id": "GX470_TP_4_KL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 4.39875, "mul": 69, "div": 4000, "nullmin": 0, "unit": "bars" }, "name": "Tire pressure, sensor 4"},
+    {"id": "GX470_TP_5_KL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 4.39875, "mul": 69, "div": 4000, "nullmin": 0, "unit": "bars" }, "name": "Tire pressure, sensor 5"}
+  ]},
+{ "hdr": "812A", "proto": "14230", "baud": 9600, "init": { "lo": 35, "hi": 15 }, "dbg": true, "cmd": {"21": "16"}, "freq": 15, "filter": { "from": 2003, "to": 2009 },
+  "signals": [
+    {"id": "GX470_TT_1_KL", "path": "Tires", "fmt": {           "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, sensor 1"},
+    {"id": "GX470_TT_2_KL", "path": "Tires", "fmt": {"bix": 8,  "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, sensor 2"},
+    {"id": "GX470_TT_3_KL", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, sensor 3"},
+    {"id": "GX470_TT_4_KL", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, sensor 4"},
+    {"id": "GX470_TT_5_KL", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 215, "min": -40, "add": -40, "nullmin": -40, "nullmax": 215, "unit": "celsius" }, "name": "Tire temperature, sensor 5"}
+  ]}
 ]
 }
