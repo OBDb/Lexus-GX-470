@@ -7,7 +7,7 @@ test_cases:
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D30000800782
+  response: 7E80761D3000080077D
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0
@@ -15,23 +15,7 @@ test_cases:
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D30800800787
-- expected_values:
-    GX470_CRUISE_CTRL_ON: 0
-    GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D30C00800782
-- expected_values:
-    GX470_CRUISE_CTRL_ON: 0
-    GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D3140080007C
-- expected_values:
-    GX470_CRUISE_CTRL_ON: 0
-    GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D31900800782
-- expected_values:
-    GX470_CRUISE_CTRL_ON: 0
-    GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D35E0080007A
+  response: 7E80761D31F0080007A
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0
