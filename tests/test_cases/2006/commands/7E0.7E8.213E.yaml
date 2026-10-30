@@ -1,0 +1,32 @@
+command_id: 7E0.7E8.213E
+test_cases:
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 123.1
+  response: 7E804613E065F
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 186.9
+  response: 7E804613E08DD
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 276.9
+  response: 7E804613E0C61
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 359.2
+  response: 7E804613E0F98
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 427.5
+  response: 7E804613E1243
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 434.8
+  response: 7E804613E128C
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 442
+  response: 7E804613E12D4
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 600.2
+  response: 7E804613E1902
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 607.5
+  response: 7E804613E194B
+- expected_values:
+    GX470_CAT_T_B1S2_V2: 612.8
+  response: 7E804613E1980

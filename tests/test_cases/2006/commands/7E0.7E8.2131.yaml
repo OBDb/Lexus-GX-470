@@ -1,0 +1,14 @@
+command_id: 7E0.7E8.2131
+test_cases:
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.05469
+  response: 7E8046131846C
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.06445
+  response: 7E8046131846D
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.07422
+  response: 7E8046131846E
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.08398
+  response: 7E8046131846F

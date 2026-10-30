@@ -1,0 +1,26 @@
+command_id: 7E0.7E8.2142
+test_cases:
+- expected_values:
+    GX470_BAT_CURRENT: -72.92096
+  response: '7E80461423554'
+- expected_values:
+    GX470_BAT_CURRENT: -72.62341
+  response: 7E804614235A2
+- expected_values:
+    GX470_BAT_CURRENT: -72.47463
+  response: 7E804614235C9
+- expected_values:
+    GX470_BAT_CURRENT: -72.39834
+  response: 7E804614235DD
+- expected_values:
+    GX470_BAT_CURRENT: -72.24956
+  response: '7E80461423604'
+- expected_values:
+    GX470_BAT_CURRENT: -72.17708
+  response: '7E80461423617'
+- expected_values:
+    GX470_BAT_CURRENT: -72.02831
+  response: 7E8046142363E
+- expected_values:
+    GX470_BAT_CURRENT: -71.95201
+  response: '7E80461423652'

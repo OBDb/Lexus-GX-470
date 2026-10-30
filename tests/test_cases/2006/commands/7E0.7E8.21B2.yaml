@@ -1,0 +1,18 @@
+command_id: 7E0.7E8.21B2
+test_cases:
+- expected_values:
+    GX470_KNOCK_ADJUST: 20.72004
+    GX470_KNOCK_FEEDBACK: -2.99907
+  response: 7E80661B20A9707A0
+- expected_values:
+    GX470_KNOCK_ADJUST: 20.72004
+    GX470_KNOCK_FEEDBACK: -1.9053
+  response: 7E80661B20A9707C3
+- expected_values:
+    GX470_KNOCK_ADJUST: 20.9388
+    GX470_KNOCK_FEEDBACK: -1.9053
+  response: 7E80661B20A9E07C3
+- expected_values:
+    GX470_KNOCK_ADJUST: 22.43882
+    GX470_KNOCK_FEEDBACK: -2.99907
+  response: 7E80661B20ACE07A0
