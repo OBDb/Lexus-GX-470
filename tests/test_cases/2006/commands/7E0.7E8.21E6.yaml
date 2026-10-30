@@ -14,7 +14,17 @@ test_cases:
     GX470_AC_COMP: 0
     GX470_FUEL_CUT: 0
     GX470_IDLE_CTRL: 1
+  response: 7E80561E6400000
+- expected_values:
+    GX470_AC_COMP: 0
+    GX470_FUEL_CUT: 0
+    GX470_IDLE_CTRL: 1
   response: 7E80561E6400800
+- expected_values:
+    GX470_AC_COMP: 0
+    GX470_FUEL_CUT: 0
+    GX470_IDLE_CTRL: 1
+  response: 7E80561E6440000
 - expected_values:
     GX470_AC_COMP: 0
     GX470_FUEL_CUT: 0

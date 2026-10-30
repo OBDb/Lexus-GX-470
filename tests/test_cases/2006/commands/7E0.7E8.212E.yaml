@@ -6,3 +6,15 @@ test_cases:
 - expected_values:
     GX470_EVAP_PURGE_DUTY_7E0: 7.84314
   response: 7E803612E14
+- expected_values:
+    GX470_EVAP_PURGE_DUTY_7E0: 15.29412
+  response: 7E803612E27
+- expected_values:
+    GX470_EVAP_PURGE_DUTY_7E0: 16.47059
+  response: 7E803612E2A
+- expected_values:
+    GX470_EVAP_PURGE_DUTY_7E0: 29.80392
+  response: 7E803612E4C
+- expected_values:
+    GX470_EVAP_PURGE_DUTY_7E0: 100
+  response: 7E803612EFF

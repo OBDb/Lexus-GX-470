@@ -12,3 +12,18 @@ test_cases:
 - expected_values:
     GX470_VALVEMATIC_CURRENT: 331.08398
   response: 7E8046131846F
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.31836
+  response: '7E80461318487'
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.32812
+  response: '7E80461318488'
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.33789
+  response: '7E80461318489'
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.34766
+  response: 7E8046131848A
+- expected_values:
+    GX470_VALVEMATIC_CURRENT: 331.35742
+  response: 7E8046131848B
