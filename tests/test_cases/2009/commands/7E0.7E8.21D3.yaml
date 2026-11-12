@@ -3,7 +3,7 @@ test_cases:
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0
-  response: 7E80761D30000000081
+  response: 7E80761D3000000007D
 - expected_values:
     GX470_CRUISE_CTRL_ON: 0
     GX470_CRUISE_CTRL_SPD: 0

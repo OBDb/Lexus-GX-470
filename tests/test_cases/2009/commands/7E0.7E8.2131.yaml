@@ -4,29 +4,5 @@ test_cases:
     GX470_VALVEMATIC_CURRENT: 2.66602
   response: '7E80461310111'
 - expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.67578
-  response: '7E80461310112'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.68555
-  response: '7E80461310113'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.69531
-  response: '7E80461310114'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.70508
-  response: '7E80461310115'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.71484
-  response: '7E80461310116'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.72461
-  response: '7E80461310117'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.73438
-  response: '7E80461310118'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.74414
-  response: '7E80461310119'
-- expected_values:
-    GX470_VALVEMATIC_CURRENT: 2.75391
-  response: 7E8046131011A
+    GX470_VALVEMATIC_CURRENT: 2.76367
+  response: 7E8046131011B

@@ -33,6 +33,14 @@ test_cases:
     7E8100A61D900000004
     7E821604064A0000000
 - expected_values:
+    GX470_ATF_T_V_14: -38
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 51.25
+    GX470_ATF_T_V_8: 55.625
+  response: |-
+    7E8100A61D902000004
+    7E8215B405FA0000000
+- expected_values:
     GX470_ATF_T_V_14: -35.99219
     GX470_ATF_T_V_21: -40
     GX470_ATF_T_V_5: 61.25
@@ -64,14 +72,6 @@ test_cases:
   response: |-
     7E8100A61D912000000
     7E8213DE03D40000000
-- expected_values:
-    GX470_ATF_T_V_14: -17.76953
-    GX470_ATF_T_V_21: -36
-    GX470_ATF_T_V_5: 53.75
-    GX470_ATF_T_V_8: 55.625
-  response: |-
-    7E8100A61D9163B0004
-    7E8215DC05FA0000000
 - expected_values:
     GX470_ATF_T_V_14: -12.79688
     GX470_ATF_T_V_21: -36

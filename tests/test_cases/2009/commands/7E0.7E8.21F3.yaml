@@ -5,9 +5,9 @@ test_cases:
     GX470_INJ_WIDTH: 1.792
   response: 7E80761F307240E787C
 - expected_values:
-    GX470_FUEL_INJ_TIM: 1.792
-    GX470_INJ_WIDTH: 3.456
-  response: 7E80761F30EAB1B8080
+    GX470_FUEL_INJ_TIM: 1.536
+    GX470_INJ_WIDTH: 2.816
+  response: 7E80761F30C07168080
 - expected_values:
     GX470_FUEL_INJ_TIM: 1.792
     GX470_INJ_WIDTH: 3.072

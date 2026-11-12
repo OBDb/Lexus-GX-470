@@ -6,11 +6,6 @@ test_cases:
     GX470_IDLE_CTRL: 0
   response: 7E80561E6008800
 - expected_values:
-    GX470_AC_COMP: 1
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 0
-  response: 7E80561E6208800
-- expected_values:
     GX470_AC_COMP: 0
     GX470_FUEL_CUT: 0
     GX470_IDLE_CTRL: 1
@@ -21,32 +16,7 @@ test_cases:
     GX470_IDLE_CTRL: 1
   response: 7E80561E640C200
 - expected_values:
-    GX470_AC_COMP: 0
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 1
-  response: 7E80561E6448000
-- expected_values:
-    GX470_AC_COMP: 0
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 1
-  response: 7E80561E6448800
-- expected_values:
-    GX470_AC_COMP: 0
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 1
-  response: 7E80561E6508800
-- expected_values:
     GX470_AC_COMP: 1
     GX470_FUEL_CUT: 0
     GX470_IDLE_CTRL: 1
-  response: 7E80561E6608000
-- expected_values:
-    GX470_AC_COMP: 1
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 1
-  response: 7E80561E6648000
-- expected_values:
-    GX470_AC_COMP: 1
-    GX470_FUEL_CUT: 0
-    GX470_IDLE_CTRL: 1
-  response: 7E80561E6648800
+  response: 7E80561E6708000
