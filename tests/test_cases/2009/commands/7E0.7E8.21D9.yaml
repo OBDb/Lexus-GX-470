@@ -1,0 +1,98 @@
+command_id: 7E0.7E8.21D9
+test_cases:
+- expected_values:
+    GX470_ATF_T_V_14: -40
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 24.375
+    GX470_ATF_T_V_8: 26.875
+  response: |-
+    7E8100A61D900000004
+    7E821406042E0000000
+- expected_values:
+    GX470_ATF_T_V_14: -40
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 35
+    GX470_ATF_T_V_8: 40
+  response: |-
+    7E8100A61D900000004
+    7E8214B005000000000
+- expected_values:
+    GX470_ATF_T_V_14: -40
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 48.75
+    GX470_ATF_T_V_8: 56.875
+  response: |-
+    7E8100A61D900000004
+    7E82158C060E0000000
+- expected_values:
+    GX470_ATF_T_V_14: -40
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 56.25
+    GX470_ATF_T_V_8: 60.625
+  response: |-
+    7E8100A61D900000004
+    7E821604064A0000000
+- expected_values:
+    GX470_ATF_T_V_14: -35.99219
+    GX470_ATF_T_V_21: -40
+    GX470_ATF_T_V_5: 61.25
+    GX470_ATF_T_V_8: 65.625
+  response: |-
+    7E8100A61D904020400
+    7E821654069A0000000
+- expected_values:
+    GX470_ATF_T_V_14: -28.97656
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 22.5
+    GX470_ATF_T_V_8: 24.375
+  response: |-
+    7E8100A61D90B060004
+    7E8213E804060000000
+- expected_values:
+    GX470_ATF_T_V_14: -23.95312
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 23.125
+    GX470_ATF_T_V_8: 26.25
+  response: |-
+    7E8100A61D9100C0004
+    7E8213F204240000000
+- expected_values:
+    GX470_ATF_T_V_14: -22
+    GX470_ATF_T_V_21: -40
+    GX470_ATF_T_V_5: 21.875
+    GX470_ATF_T_V_8: 21.25
+  response: |-
+    7E8100A61D912000000
+    7E8213DE03D40000000
+- expected_values:
+    GX470_ATF_T_V_14: -17.76953
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 53.75
+    GX470_ATF_T_V_8: 55.625
+  response: |-
+    7E8100A61D9163B0004
+    7E8215DC05FA0000000
+- expected_values:
+    GX470_ATF_T_V_14: -12.79688
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 40
+    GX470_ATF_T_V_8: 48.125
+  response: |-
+    7E8100A61D91B340004
+    7E82150005820000000
+- expected_values:
+    GX470_ATF_T_V_14: -9.69141
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 46.25
+    GX470_ATF_T_V_8: 49.375
+  response: |-
+    7E8100A61D91E4F0004
+    7E82156405960000000
+- expected_values:
+    GX470_ATF_T_V_14: -3.8125
+    GX470_ATF_T_V_21: -36
+    GX470_ATF_T_V_5: 51.875
+    GX470_ATF_T_V_8: 60
+  response: |-
+    7E8100A61D924300004
+    7E8215BE06400000000

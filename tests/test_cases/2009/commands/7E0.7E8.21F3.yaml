@@ -1,0 +1,34 @@
+command_id: 7E0.7E8.21F3
+test_cases:
+- expected_values:
+    GX470_FUEL_INJ_TIM: 0.896
+    GX470_INJ_WIDTH: 1.792
+  response: 7E80761F307240E787C
+- expected_values:
+    GX470_FUEL_INJ_TIM: 1.792
+    GX470_INJ_WIDTH: 3.456
+  response: 7E80761F30EAB1B8080
+- expected_values:
+    GX470_FUEL_INJ_TIM: 1.792
+    GX470_INJ_WIDTH: 3.072
+  response: 7E80761F30EB4187C85
+- expected_values:
+    GX470_FUEL_INJ_TIM: 1.792
+    GX470_INJ_WIDTH: 5.248
+  response: 7E80761F30ED429747A
+- expected_values:
+    GX470_FUEL_INJ_TIM: 1.92
+    GX470_INJ_WIDTH: 3.2
+  response: 7E80761F30F01198085
+- expected_values:
+    GX470_FUEL_INJ_TIM: 2.176
+    GX470_INJ_WIDTH: 4.224
+  response: 7E80761F311FC217679
+- expected_values:
+    GX470_FUEL_INJ_TIM: 5.888
+    GX470_INJ_WIDTH: 8.96
+  response: 7E80761F32EE0467881
+- expected_values:
+    GX470_FUEL_INJ_TIM: 7.168
+    GX470_INJ_WIDTH: 6.528
+  response: 7E80761F3384C337C7C
