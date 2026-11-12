@@ -1,8 +1,8 @@
 command_id: 7E0.7E8.213E
 test_cases:
 - expected_values:
-    GX470_CAT_T_B1S2_V2: 310.8
-  response: 7E804613E0DB4
+    GX470_CAT_T_B1S2_V2: 81.7
+  response: 7E804613E04C1
 - expected_values:
     GX470_CAT_T_B1S2_V2: 369.4
   response: 7E804613E0FFE

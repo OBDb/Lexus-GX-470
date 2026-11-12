@@ -1,8 +1,8 @@
 command_id: 7E0.7E8.2142
 test_cases:
 - expected_values:
-    GX470_BAT_CURRENT: -76.35042
-  response: 7E804614231D1
+    GX470_BAT_CURRENT: -77.31556
+  response: 7E804614230D4
 - expected_values:
     GX470_BAT_CURRENT: -75.2327
   response: 7E804614232F6
